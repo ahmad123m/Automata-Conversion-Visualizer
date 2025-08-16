@@ -1,0 +1,258 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Mono", monospace;
+  background-color: #fefce8;
+  color: #1f2937;
+  overflow-x: hidden;
+}
+.custom-container {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.panel {
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Tab Navigation */
+.tab-container {
+  display: flex;
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+.tab-button {
+  flex: 1;
+  padding: 1rem 2rem;
+  border: none;
+  background: transparent;
+  color: #6b7280;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.tab-button.active {
+  background-color: #10b981;
+  color: white;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+.tab-button:hover:not(.active) {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+/* Tab Content */
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
+
+/* Profile Section */
+.profile-card {
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 3rem;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+.profile-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #10b981;
+  margin: 0 auto 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+}
+.profile-name {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+.profile-title {
+  font-size: 1.3rem;
+  color: #6b7280;
+  margin-bottom: 2rem;
+}
+.profile-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #374151;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.profile-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.stat-card {
+  background-color: #f0fdf4;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  border: 1px solid #bbf7d0;
+}
+.stat-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #10b981;
+}
+.stat-label {
+  color: #6b7280;
+  margin-top: 0.5rem;
+}
+
+.main-btn {
+  background-color: #10b981;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.main-btn:hover {
+  background-color: #059669;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+.main-btn:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+.secondary-btn {
+  background-color: #d1d5db;
+  color: #111827;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.secondary-btn:hover {
+  background-color: #9ca3af;
+  transform: translateY(-1px);
+}
+.secondary-btn:disabled {
+  background-color: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+}
+.graph-box {
+  height: 40vh;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+.step-box {
+  background: #1e3a8a;
+  color: #e0f2fe;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  font-family: "Courier New", Courier, monospace;
+  max-height: 300px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.explanation-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  max-height: 300px;
+  overflow-y: auto;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling */
+header h1 {
+  color: #1f2937;
+}
+
+header p {
+  color: #6b7280;
+}
+
+/* Select styling */
+select {
+  background-color: #fff;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+select:focus {
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+  outline: none;
+}
+
+/* Labels */
+label {
+  color: #374151;
+  font-weight: 600;
+}
+
+/* Section titles */
+h2 {
+  color: #1f2937;
+}
+
+/* Scrollbar styling */
+.step-box::-webkit-scrollbar,
+.explanation-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+.step-box::-webkit-scrollbar-track {
+  background: rgba(30, 58, 138, 0.3);
+  border-radius: 4px;
+}
+
+.step-box::-webkit-scrollbar-thumb {
+  background: rgba(224, 242, 254, 0.6);
+  border-radius: 4px;
+}
+
+.explanation-box::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+
+.explanation-box::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
