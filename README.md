@@ -49,5 +49,5 @@ An interactive web-based tool for visualizing step-by-step conversions between d
 ### Quick Start
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/ahmad123m/automata-conversion-visualizer.git
+   git clone https://github.com/dev-4hmad/automata-conversion-visualizer.git
    cd automata-conversion-visualizer
